@@ -1,21 +1,21 @@
 // ** to initialize and store values inside an array.
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// int main(){
-//     int n(0);
-//     cout<<"enter the value of the n"<<endl;
-//     cin>>n;
-//     int arr[n]; // ** initializing the array.
-//     for(int i = 0;i<n;i++){
-//         cin>>arr[i];
-//     }
-//     cout<<"the elements of the array input by the user"<<endl;
-//     for(int i = 0;i<n;i++){
-//         cout<<arr[i]<<endl;
-//     }
-//     return 0;
-// }
+int main(){
+    int n(0);
+    cout<<"enter the value of the n"<<endl;
+    cin>>n;
+    int arr[n]; // ** initializing the array.
+    for(int i = 0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<"the elements of the array input by the user"<<endl;
+    for(int i = 0;i<n;i++){
+        cout<<arr[i]<<endl;
+    }
+    return 0;
+}
 // ** another method to traverse through the array
 #include<bits/stdc++.h>
 #include<array>
