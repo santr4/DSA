@@ -121,3 +121,69 @@ int main()
     }
     return 0;
 }
+
+// ** merge sort revision
+
+#include<iostream>
+using namespace std;
+
+void merge(int arr1[],int l,int mid,int r){
+    int b[6];
+    int i = l;
+    int j = mid+1;
+    int k = l;
+    while(i<=mid && j <=r){
+        if(arr1[i] < arr1[j]){
+            b[k] = arr1[i];
+            i++;
+            k++;
+        }
+        else{
+            b[k] = arr1[j];
+            j++;
+            k++;
+        }
+    }
+    while(i <= mid){
+        b[k] = arr1[i];
+        i++;
+        k++;
+    }
+    while(j <= r){
+        b[k] = arr1[j];
+        j++;
+        k++;
+    }
+    for(int h = l;h<=r;h++){
+        arr1[h] = b[h];
+    }
+}
+
+void mergesort(int arr1[],int l,int r){
+    int mid;
+    if(l<r){
+        mid = (l+r)/2;
+        mergesort(arr1,l,mid);
+        mergesort(arr1,mid+1,r);
+        merge(arr1,l,mid,r);
+    }
+}
+
+int main(){
+    int arr[6];
+    cout<<"enter the array"<<endl;
+    for(int i = 0;i<6;i++){
+        cin>>arr[i];
+    }
+    cout<<"before merge sort"<<endl;
+    for(int i = 0;i<6;i++){
+        cout<<arr[i]<<" ";
+    }
+    mergesort(arr,0,5);
+    cout<<endl;
+    cout<<"after merge sort"<<endl;
+    for(int i = 0;i<6;i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
