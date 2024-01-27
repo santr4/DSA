@@ -7,3 +7,4 @@
   - Sorting
   - Sliding Window and Two Pointer Approach
   - Dynamic Programming
+  - Graphs
