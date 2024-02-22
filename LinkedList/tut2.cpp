@@ -1,4 +1,4 @@
-// ** code to convert array to linkedlist.
+// ** code to convert array to linkedlist and also to tranverse and find the length of the linkedlist.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -37,11 +37,25 @@ Node *convertArr2LL(vector<int> &arr)
     return head;
 }
 
+int lengthOfLL(Node *head)
+{
+    int count = 0;
+    Node *temp = head;
+    while (temp != nullptr)
+    {
+        temp = temp->next;
+        count++;
+    }
+    return count;
+}
+
 int main()
 {
     vector<int> arr = {2, 5, 8, 7};
     Node *head1 = convertArr2LL(arr);
     cout << head1->data << endl;
     cout << head1->next->data << endl;
+
+    cout << lengthOfLL(head1) << endl;
     return 0;
 }
