@@ -23,7 +23,7 @@ vector<int> nextPermutation(vector<int> &arr)
 {
     int n = arr.size();
     int ind = -1;
-    for (int i = n - 2; i >= 0; i++)
+    for (int i = n - 2; i >= 0; i--)
     {
         if (arr[i] < arr[i + 1])
         {
@@ -36,7 +36,7 @@ vector<int> nextPermutation(vector<int> &arr)
         reverse(arr.begin(), arr.end());
         return arr;
     }
-    for (int i = n - 1; i > ind; i++)
+    for (int i = n - 1; i > ind; i--)
     {
         if (arr[i] > arr[ind])
         {
